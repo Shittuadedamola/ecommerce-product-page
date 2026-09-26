@@ -61,5 +61,37 @@
         <img src="images/icon-cart.svg" alt="" class="w-[25px] h-[25px] mr-5">
         <h1 class="text-xl">Add to cart</h1>
     </section>
+
+    <aside id="navigation" class="h-[100vh] w-[70vw] absolute bg-white top-0 left-0 px-7 py-7 z-50 hidden">
+        <img src="images/icon-close.svg" alt="" id="cancelNavigation" class="absolute left-[20px]">
+        <div class="flex flex-col h-[270px] justify-between mt-[120px]">
+            <a href="" class="text-2xl font-bold">Collections</a>
+            <a href="" class="text-2xl font-bold">Men</a>
+            <a href="" class="text-2xl font-bold">Women</a>
+            <a href="" class="text-2xl font-bold">About</a>
+            <a href="" class="text-2xl font-bold">Contact</a>
+        </div>
+    </aside>
+    <div id="overlay"
+        class="hidden fixed inset-0 bg-black/50 z-40">
+    </div>
+
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const cancelNavigation = document.getElementById("cancelNavigation");
+        const navigation = document.getElementById("navigation");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", ()=>{
+            navigation.classList.toggle("hidden");
+            overlay.classList.toggle("hidden")
+        })
+
+        cancelNavigation.addEventListener("click", ()=>{
+            navigation.classList.toggle("hidden");
+            overlay.classList.toggle("hidden")
+        })
+    </script>
 </body>
 </html>
